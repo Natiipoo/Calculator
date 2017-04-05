@@ -1,0 +1,80 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Taschenrechner</title>
+<link href="style2.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript">
+<!--
+function Check(Eingabe) {
+  	var nur_das ="0123456789[]()-+*%/";	
+	for (var i = 0; i < Eingabe.length; i++)
+   	if (nur_das.indexOf(Eingabe.charAt(i))<0 ) return false;
+  	return true;
+ }
+
+function Ergebnis() {
+	var x = 0;
+	if (Check(window.document.Rechner.Display.value))
+     	x = eval(window.document.Rechner.Display.value);
+   	window.document.Rechner.Display.value = x;
+ }
+
+function Hinzufuegen(Zeichen) {
+   	window.document.Rechner.Display.value =
+   	window.document.Rechner.Display.value + Zeichen;
+ }
+//-->
+</script>
+</head>
+
+<body>
+<form name="Rechner" action="" onSubmit="Ergebnis();return false;">
+<table border="2" cellpadding="10" cellspacing="2">
+
+<tr>
+<td>
+<input type="text" name="Display" align="right" class="display"></td>
+</tr>
+
+<td>
+<table border="0" cellpadding="0" cellspacing="2">
+
+<tr>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  7   " onClick="Hinzufuegen('7')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  8   " onClick="Hinzufuegen('8')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  9   " onClick="Hinzufuegen('9')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  +   " onClick="Hinzufuegen('+')"></td>
+</tr>
+
+<tr>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  4   " onClick="Hinzufuegen('4')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  5   " onClick="Hinzufuegen('5')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  6   " onClick="Hinzufuegen('6')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  -   " onClick="Hinzufuegen('-')"></td>
+</tr>
+
+<tr>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  1   " onClick="Hinzufuegen('2')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  2   " onClick="Hinzufuegen('2')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  3   " onClick="Hinzufuegen('3')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  *   " onClick="Hinzufuegen('*')"></td>
+</tr>
+
+<tr>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  =   " onClick="Ergebnis()"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  0   " onClick="Hinzufuegen('0')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  .   " onClick="Hinzufuegen('.')"></td>
+<td><input type="button" style="height: 40px; width: 40px;" class="button" value="  /   " onClick="Hinzufuegen('/')"></td>
+</tr>
+
+<tr>
+<td><input type="reset" style="height: 40px; width: 40px;" class="button" value="  C  "></td>
+</tr>
+
+</table>
+</table>
+
+</form>
+</body>
+</html>
